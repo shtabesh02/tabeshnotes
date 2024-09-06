@@ -1,0 +1,89 @@
+.logincontainer{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    /* border: 2px red solid; */
+    width: 300px;
+    border-radius: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+.errors {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .form-input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 5px;
+  }
+
+  .form-label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    /* margin-bottom: 10px; */
+  }
+
+  .login-form-button,
+  .login-form-demo-login {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .login-form-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .login-form-demo-login {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .login-form-button:hover,
+  .login-form-demo-login:hover {
+    opacity: 0.8;
+  }
+  
+  .login-form-button:active,
+  .login-form-demo-login:active {
+    opacity: 0.6;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  button {
+    cursor: pointer;
+  }
+  
+  .createanaccount{
+    border-top: 1px dashed gray;
+    margin-top: 30px;
+  }
