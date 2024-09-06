@@ -1,0 +1,83 @@
+.errorcss{
+    color: red;
+}
+
+
+.updatecoursecontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+    
+}
+.updatethecourse {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    width: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.back2managecourses{
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    position: fixed;
+}
+
+.addingnewcourse > button:hover {
+    background-color: #0088cc;
+}
+
+.courseform{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+}
+.courseform div {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.courseform label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+.courseform input[type='text'] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+.courseform input[type='text']:focus {
+    border-color: #00aaff;
+    outline: none;
+}
+.courseform > .sbmtbtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.courseform button {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.courseform button:hover {
+    background-color: #0088cc;
+}

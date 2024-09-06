@@ -1,0 +1,138 @@
+.coursedetailscontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.tabs h3 {
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+.tabs h3:hover {
+    text-decoration: underline;
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    height: 1px;
+    background: #ccc;
+}
+
+.lessoncartt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.thelessonn {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: max-content;
+    max-width: 300px;
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
+    padding: 20px;
+}
+
+.thelessonn:hover {
+    transform: scale(1.05);
+}
+
+.thelessonn a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.thelessonn a:hover {
+    text-decoration: underline;
+}
+
+.msg2students{
+    max-width: 800px;
+}
+
+.enroll-now{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    margin-right: 20px;
+    padding-right: 20px;
+}
+.enrollbtn{
+    padding: 5px;
+    /* width: 50%; */
+    /* border-bottom: 1px dashed rgb(182, 181, 181); */
+    display: flex;
+    gap: 10px;
+
+  }
+.enroll-now button{
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1em;
+}
+.enroll-now button:hover {
+    background-color: #0056b3; /* Darker shade of button color */
+  }
+
+  .comments_container{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content:flex-start;
+    width: 85%;
+  }
+  .commentsbtn{
+    margin: 10px 0px;
+  }
+
+  .ratingcount{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+
+  }
+  .ratingdetails{
+    display: flex;
+    padding: 10px;
+    border: 1px solid gray;
+  }
+.ratingcount span{
+    margin: 5px;
+    /* padding: 5px; */
+}

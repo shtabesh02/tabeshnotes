@@ -1,0 +1,44 @@
+.currentusercoursescontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.currentusercoursescontainer .courseslistss{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.thecourse {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
+    padding: 20px;
+}
+
+.thecourse:hover {
+    transform: scale(1.05);
+}
+
+.thecourse a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.thecourse a:hover {
+    text-decoration: underline;
+}
+
+.instructor {
+    font-size: 1em;
+    color: #555;
+}
+

@@ -1,0 +1,147 @@
+
+.lessonDetails_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.back2courseDetails {
+    margin-bottom: 20px;
+}
+
+.back2courseDetails button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back2courseDetails button:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.lesson_contents {
+    display: flex;
+    gap: 20px;
+}
+
+.lessoncontent {
+    flex: 2;
+}
+
+.toc a.active{
+    color: #391dda;
+    font-weight: bold;
+}
+
+.lessoncontent p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.next_prev {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.next_prev button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.next_prev button:hover {
+    background-color: #0056b3;
+}
+
+.table_of_contents {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.table_of_contents h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.table_of_contents ul {
+    list-style: none;
+    padding: 0;
+}
+
+.table_of_contents li {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.table_of_contents li:hover {
+    text-decoration: underline;
+    color: #007BFF;
+}
+
+.nextbtn.disabled, .prevbtn.disabled{
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: gray;
+}
+
+.markform button{
+    padding: 10px;
+    margin: 20px 0px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    background-color: #586864;
+    color: #fff;
+    font-size: 1em;
+    display: flex;
+    gap: 5px;
+    font-weight: bold;
+}
+/* Enroll Now */
+
+.enroll-now{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    margin-right: 20px;
+    padding-right: 20px;
+}
+.enrollbtn{
+    padding: 5px;
+    /* width: 50%; */
+    /* border-bottom: 1px dashed rgb(182, 181, 181); */
+    display: flex;
+    gap: 10px;
+
+  }
+.enroll-now button{
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1em;
+}
+.enroll-now button:hover {
+    background-color: #0056b3; /* Darker shade of button color */
+  }

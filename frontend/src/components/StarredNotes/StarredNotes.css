@@ -1,0 +1,82 @@
+.starrednotes-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.notes li{
+    list-style-type: none;
+    /* margin: 15px 1px; */
+}
+.errors{
+    color: red;
+}
+.one-note-container{
+    margin: 15px;
+    padding: 10px;
+}
+.one-note-container span{
+    margin-right: 15px;
+}
+.one-note-container h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.user-icon{
+    border: solid rgb(179, 179, 179);
+    padding: 5px;
+    border-radius: 50%;
+}
+.addnote{
+    width: 100%;
+    padding: 5px;
+    height: 10vh;
+}
+.noteform{
+    width: 100%;
+    /* margin: 5px; */
+    /* padding: 10px; */
+    /* height: 50vh; */
+}
+
+.addnotebtn{
+    display: flex;
+    justify-content: space-between
+}
+
+.addnotebtn > button {
+    background-color: #00aaff;
+    margin: 10px 15px 10px 20px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.courseform button:hover {
+    background-color: #0088cc;
+}
+
+.title {
+    width: 98% !important;
+    /* background-color: #0088cc; */
+    margin: 0px;
+    border: #978080 !important;
+}
+  
+.ql-editor {
+    min-height: 100px;
+    width: 100%;
+  }
+
+.more-less{
+    color: rgb(39, 24, 245);
+    font-weight: bold;
+}

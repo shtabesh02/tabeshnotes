@@ -1,0 +1,86 @@
+.errorcss {
+    color: red;
+}
+
+.updatelessoncontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+
+}
+
+.updatelesson {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    width: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.back2managelesson {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    position: fixed;
+}
+
+.updatelessonform > button:hover {
+    background-color: #0088cc;
+}
+
+.updatelessonform {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+}
+
+.updatelessonform label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.updatelessonform input[type='text'],
+.updatelessonform textarea {
+    width: 96.5%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.updatelessonform input[type='text']:focus {
+    border-color: #00aaff;
+    outline: none;
+}
+
+.updatelessonform>.sbmtbtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.updatelessonform button {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.updatelessonform button:hover {
+    background-color: #0088cc;
+}

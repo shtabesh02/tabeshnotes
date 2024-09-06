@@ -1,0 +1,64 @@
+.topcontainerdiv{
+    display: flex;
+    justify-content: center;
+}
+.userprofilecontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    /* border: 1px dashed black; */
+}
+.profileheadings{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid gray; */
+    width: 100%;
+    padding: 20px;
+}
+.socialicons{
+    display: flex;
+    gap: 20px;
+}
+.followme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.userprofilepic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 200px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+}
+.followonsn{
+    background-color: aliceblue;
+    width:max-content;
+    border-radius: 10px;
+    padding: 10px 20px;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    cursor: pointer;
+}
+.userbio .biodetail, .biolist{
+    margin: 5px 30px;
+    padding: 0px 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.biolist{
+    list-style-type: circle;
+}
+.coursesAndnotes ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    font-weight: bold;
+}

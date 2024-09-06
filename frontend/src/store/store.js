@@ -1,8 +1,27 @@
+// frontend/src/store/store.js
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
+import sessionReducer from './session';
+import courseReducer from './courses';
+import lessonReducer from './lessons';
+import commentReducer from './comments';
+import starrednotesReducer from './starrednotes'
+import profileReducer from './userprofile';
+import completedLessons from './completedlesson';
+import enrollmentReducer from './enrollment';
+import searchReducer from './search';
 
 const rootReducer = combineReducers({
   // ADD REDUCERS HERE
+  session: sessionReducer,
+  courseReducer: courseReducer,
+  lessonReducer: lessonReducer,
+  commentReducer: commentReducer,
+  starrednotesReducer: starrednotesReducer,
+  profileReducer: profileReducer,
+  completedLessons: completedLessons,
+  enrollmentReducer: enrollmentReducer,
+  searchReducer: searchReducer,
 });
 
 let enhancer;

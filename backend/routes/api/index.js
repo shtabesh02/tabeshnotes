@@ -9,14 +9,14 @@ const { requireAuth } = require('../../utils/auth.js');
 
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
-// const courseRouter = require('./courses.js');
-// const lessonRouter = require('./lessons.js');
-// const commentRouter = require('./comments.js');
-// const starrednotesRouter = require('./starrednotes.js');
-// const userprofileRouter = require('./userprofile.js');
-// const completedRouter = require('./completed.js');
-// const enrollmentRouter = require('./enrollment.js');
-// const searchResult = require('./search.js');
+const courseRouter = require('./courses.js');
+const lessonRouter = require('./lessons.js');
+const commentRouter = require('./comments.js');
+const starrednotesRouter = require('./starrednotes.js');
+const userprofileRouter = require('./userprofile.js');
+const completedRouter = require('./completed.js');
+const enrollmentRouter = require('./enrollment.js');
+const searchResult = require('./search.js');
 
 
 
@@ -26,14 +26,14 @@ router.use(restoreUser);
 router.use('/session', sessionRouter);
 
 router.use('/users', usersRouter);
-// router.use('/courses', courseRouter);
-// router.use('/lessons', lessonRouter);
-// router.use('/comments', commentRouter);
-// router.use('/starrednotes', starrednotesRouter);
-// router.use('/userprofile', userprofileRouter);
-// router.use('/completed', completedRouter);
-// router.use('/enrollment', enrollmentRouter);
-// router.use('/search', searchResult);
+router.use('/courses', courseRouter);
+router.use('/lessons', lessonRouter);
+router.use('/comments', commentRouter);
+router.use('/starrednotes', starrednotesRouter);
+router.use('/userprofile', userprofileRouter);
+router.use('/completed', completedRouter);
+router.use('/enrollment', enrollmentRouter);
+router.use('/search', searchResult);
 
 
 

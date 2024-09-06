@@ -1,0 +1,115 @@
+.managecoursecontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.coursecarts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.thecourse {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.thecourse > .btns{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+}
+.thecourse:hover {
+    transform: scale(1.05);
+}
+
+.thecourse a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.thecourse a:hover {
+    text-decoration: underline;
+}
+
+.instructor {
+    font-size: 1em;
+    color: #555;
+}
+
+.btns button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    background-color: #278cf8;
+    color: #ffffff;
+  }
+
+  .btns button:hover {
+    background-color: #0056b3; /* Darker shade of button color */
+  }
+  .createcourse{
+    padding-bottom: 10px;
+    width: max-content;
+    border-bottom: 1px dashed rgb(182, 181, 181);
+  }
+.createcourse button{
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1em;
+}
+.createcourse button:hover {
+    background-color: #0056b3; /* Darker shade of button color */
+  }
+
+  /* Progres bar */
+  .progress{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+.progress-bar{
+    width: 100%;
+    height: 5px;
+    border: 1px solid rgb(139, 127, 127);
+  }
+
+  .percentage-progress{
+    display: flex;
+    align-items: center;
+    /* width: 10%;
+    height: 4px; */
+    background-color: #0056b3;
+    border: 1px solid gray;
+  }

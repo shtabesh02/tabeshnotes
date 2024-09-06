@@ -7,26 +7,34 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Users', {
+    await queryInterface.createTable('Course_Comments', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      username: {
-        type: Sequelize.STRING(30),
-        allowNull: false,
-        unique: true
+      user_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Users',
+          id: 'id'
+        },
+        onDelete:'cascade'
       },
-      email: {
-        type: Sequelize.STRING(256),
-        allowNull: false,
-        unique: true
+      course_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Courses',
+          id: 'id'
+        },
+        onDelete: 'cascade'
       },
-      hashedPassword: {
-        type: Sequelize.STRING.BINARY,
-        allowNull: false
+      comment: {
+        type: Sequelize.STRING
+      },
+      stars: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
@@ -40,9 +48,8 @@ module.exports = {
       }
     }, options);
   },
-
   async down(queryInterface, Sequelize) {
-    options.tableName = "Users";
+    options.tableName = "Course_Comments";
     return queryInterface.dropTable(options);
   }
 };

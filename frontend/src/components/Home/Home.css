@@ -1,0 +1,106 @@
+.home_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.tabs-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: max-content;
+    padding: 0px 20px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabs h3 {
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #007bff;
+    text-align: center;
+}
+
+.tabs h3:hover {
+    text-decoration: underline;
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    height: 1px;
+    background: #ccc;
+}
+
+.coursecarts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.thecourse {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
+    padding: 20px;
+}
+
+.thecourse:hover {
+    transform: scale(1.05);
+}
+
+.thecourse a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.thecourse a:hover {
+    text-decoration: underline;
+}
+
+.instructor {
+    font-size: 1em;
+    color: #555;
+}
+/* 
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coursecarts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .thecourse {
+        width: 90%;
+    }
+} */
