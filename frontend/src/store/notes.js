@@ -1,21 +1,21 @@
-// import StarredNotes from "../components/StarredNotes/StarredNotes";
+// import notes from "../components/notes/notes";
 import { csrfFetch } from "./csrf";
 
-const LOADSTARREDNOTES = 'loadallstarrednotesfromdb';
+const LOADnotes = 'loadallnotesfromdb';
 const INSERTNEWNOTE = 'addnewnotetostate';
 const ADDTHISNOTE2THESTATE = 'addthisnote2thestate';
 const UPDATEMYStarredNOTE = 'updatemystarrednote';
 const DELETETHISNOTE = 'deletethisdatafromstate';
-// regular action to load StarredNotes
+// regular action to load notes
 const loadSN = (sn) => {
     return {
-        type: LOADSTARREDNOTES,
+        type: LOADnotes,
         sn
     }
 }
-// thunk action to load StarredNotes from db
-export const loadStarredNotes = () => async (dispatch) => {
-    const response = await csrfFetch(`/api/starrednotes`);
+// thunk action to load notes from db
+export const loadnotes = () => async (dispatch) => {
+    const response = await csrfFetch(`/api/notes`);
     // console.log('stareednotes loaded: ', response)
     if (response.ok) {
         const sn = await response.json();
@@ -32,7 +32,7 @@ const addthisnote2state = (notedetails) => {
 }
 // thunk action to load one note details from db
 export const loadthenote = (starrednote_id) => async (dispatch) => {
-    const response = await csrfFetch(`/api/starrednotes/${starrednote_id}`);
+    const response = await csrfFetch(`/api/notes/${starrednote_id}`);
     // console.log('response: ', response)
     if(response.ok){
         const data = await response.json();
@@ -50,7 +50,7 @@ const addnewnote = (newnote) => {
 }
 // thunk action to insert a new note
 export const insertnewnote = (newnote) => async (dispatch) => {
-    const response = await csrfFetch(`/api/starrednotes`, {
+    const response = await csrfFetch(`/api/notes`, {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newnote)
@@ -72,7 +72,7 @@ const updatemynote = (updatednote) => {
 }
 // thunk to update a note
 export const updatethenote = (updatednote, starrednote_id) => async (dispatch) => {
-    const response = await csrfFetch(`/api/starrednotes/${starrednote_id}/update`, {
+    const response = await csrfFetch(`/api/notes/${starrednote_id}/update`, {
         method: 'PUT',
         headers: {"Content-Type":"application/json"},
         body: JSON.stringify(updatednote)
@@ -92,7 +92,7 @@ const deletethisnote = (deleteddata) => {
 }
 // thunk to delete a note
 export const deleteanote = (starrednote_id) => async (dispatch) => {
-    const response = await csrfFetch(`/api/starrednotes/${starrednote_id}`, {
+    const response = await csrfFetch(`/api/notes/${starrednote_id}`, {
         method: 'DELETE'
     })
     if(response.ok){
@@ -102,28 +102,28 @@ export const deleteanote = (starrednote_id) => async (dispatch) => {
 }
 
 const initialState = {
-    StarredNotes: {},
-    StarredNoteDetails: {}
+    notes: {},
+    NoteDetails: {}
 }
-const starrednotesReducer = (state = initialState, action) => {
+const notesReducer = (state = initialState, action) => {
     switch (action.type) {
-        case LOADSTARREDNOTES: {
+        case LOADnotes: {
             const _sn = {};
             action.sn.forEach(element => _sn[element.id] = element);
-            return { ...state, StarredNotes: { ...state.StarredNotes, ..._sn } }
+            return { ...state, notes: { ...state.notes, ..._sn } }
         }
         case INSERTNEWNOTE: {
-            return {...state, StarredNotes: {...state.StarredNotes, [action.newnote.id]:action.newnote}}
+            return {...state, notes: {...state.notes, [action.newnote.id]:action.newnote}}
         }
         case ADDTHISNOTE2THESTATE: {
             return {...state, StarredNoteDetails: {...action.notedetails}}
         }
         case UPDATEMYStarredNOTE: {
-            return {...state, StarredNotes: {...state.StarredNotes, [action.updatednote.id]: action.updatednote}}
+            return {...state, notes: {...state.notes, [action.updatednote.id]: action.updatednote}}
         }
         case DELETETHISNOTE: {
             const newState = {...state};
-            delete newState.StarredNotes[action.deleteddata];
+            delete newState.notes[action.deleteddata];
             return newState
         }
         default:
@@ -131,4 +131,4 @@ const starrednotesReducer = (state = initialState, action) => {
     }
 }
 
-export default starrednotesReducer;
+export default notesReducer;

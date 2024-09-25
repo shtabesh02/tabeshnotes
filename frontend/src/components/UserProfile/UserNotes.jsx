@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { loadStarredNotes } from '../../store/starrednotes';
+import { loadnotes } from '../../store/notes';
 import { NavLink } from 'react-router-dom';
 import DOMPurify from 'dompurify';
 import './UserNotes.css';
@@ -8,15 +8,15 @@ import './UserNotes.css';
 function UserNotes({username}) {
   // const currentuser = useSelector(state => state.session.user.id)
   const dispatch = useDispatch();
-  const currentusernotes = useSelector(state => Object.values(state.starrednotesReducer?.StarredNotes))
-  const currentStarredNotes = [];
+  const currentusernotes = useSelector(state => Object.values(state.notesReducer?.notes))
+  const currentnotes = [];
   currentusernotes.forEach(note => {
     if(note?.User.username == username){
-      currentStarredNotes.push(note);
+      currentnotes.push(note);
     }
   });
   useEffect(() => {
-    dispatch(loadStarredNotes());
+    dispatch(loadnotes());
   }, [dispatch]);
 
    // displaying 300 character states
@@ -28,11 +28,11 @@ function UserNotes({username}) {
    }
 
   return (
-    <div className='mystarrednotes'>
+    <div className='mynotes'>
       <h1>User Starred Notes</h1>
       <ul>
       {
-          currentStarredNotes && currentStarredNotes
+          currentnotes && currentnotes
           .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) 
           .map(note => (
             <li className='one-note' key={note.id}>
@@ -44,7 +44,7 @@ function UserNotes({username}) {
                 <span>{note.User?.firstName + ' ' + note.User?.lastName}</span>
                 </NavLink>
                 <span>{new Date(note.createdAt).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' })}</span>
-                <NavLink to={`/starrednotes/${note.id}`} style={{ textDecoration: "none" }}>
+                <NavLink to={`/notes/${note.id}`} style={{ textDecoration: "none" }}>
                   {/* <hr /> */}
                   <h3>{note.title}</h3>
                 </NavLink>

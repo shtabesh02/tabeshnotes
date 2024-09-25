@@ -15,14 +15,13 @@ import UpdateCourse from './components/ManageCourses/UpdateCourse';
 import ManageLessons from './components/ManageLessons/ManageLessons';
 import AddLesson from './components/ManageLessons/AddLesson';
 import UpdateLesson from './components/ManageLessons/UpdateLesson';
-import StarredNotes from './components/StarredNotes';
-import StarredNoteModal from './components/StarredNoteModal/StarredNoteModal';
-import StarredNoteDetails from './components/StarredNotes/StarredNoteDetails';
-import UpdateStarredNote from './components/StarredNotes/UpdateStarredNote';
+import StarredNoteDetails from './components/notes/NoteDetails';
+import UpdateStarredNote from './components/notes/UpdateNote';
 import UserProfile from './components/UserProfile/UserProfile';
 import UpdateProfile from './components/UserProfile/UpdateProfile';
 import AddProfile from './components/UserProfile/AdduserProfile';
 import SearchResult from './components/SearchResult';
+import Notes from './components/Notes/Notes';
 
 function Layout() {
   const dispatch = useDispatch();
@@ -91,19 +90,15 @@ const router = createBrowserRouter([
         element: <UpdateLesson />
       },
       {
-        path: '/starrednotes',
-        element: <StarredNotes />
+        path: '/notes',
+        element: <Notes />
       },
       {
-        path: '/addstarrednote',
-        element: <StarredNoteModal />
-      },
-      {
-        path: '/starrednotes/:starrednote_id',
+        path: '/notes/:starrednote_id',
         element: <StarredNoteDetails />
       },
       {
-        path: '/starrednotes/:starrednote_id/update',
+        path: '/notes/:starrednote_id/update',
         element: <UpdateStarredNote />
       },
       {

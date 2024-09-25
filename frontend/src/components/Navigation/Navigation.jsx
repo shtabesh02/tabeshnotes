@@ -72,7 +72,7 @@ function Navigation({ isLoaded }) {
       <hr />
       <ul className='top-headings'>
         <li><NavLink to={'/'} style={{ textDecoration: "none" }}>Courses</NavLink></li>
-        <li><NavLink to={'/starrednotes'} style={{ textDecoration: "none" }}>Starred Notes</NavLink></li>
+        <li><NavLink to={'/notes'} style={{ textDecoration: "none" }}>Notes</NavLink></li>
       </ul>
       <hr />
     </>

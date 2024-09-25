@@ -26,6 +26,10 @@ module.exports = (sequelize, DataTypes) => {
       Lesson.hasMany(models.CompletedLesson, {
         foreignKey: 'lesson_id',
         onDelete: 'CASCADE'
+      });
+
+      Lesson.hasMany(models.Media, {
+        foreignKey: 'lesson_id',
       })
 
     }

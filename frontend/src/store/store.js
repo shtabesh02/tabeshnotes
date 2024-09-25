@@ -5,11 +5,12 @@ import sessionReducer from './session';
 import courseReducer from './courses';
 import lessonReducer from './lessons';
 import commentReducer from './comments';
-import starrednotesReducer from './starrednotes'
+import notesReducer from './notes'
 import profileReducer from './userprofile';
 import completedLessons from './completedlesson';
 import enrollmentReducer from './enrollment';
 import searchReducer from './search';
+import profilePhotoReducer from './profilePicture';
 
 const rootReducer = combineReducers({
   // ADD REDUCERS HERE
@@ -17,11 +18,12 @@ const rootReducer = combineReducers({
   courseReducer: courseReducer,
   lessonReducer: lessonReducer,
   commentReducer: commentReducer,
-  starrednotesReducer: starrednotesReducer,
+  notesReducer: notesReducer,
   profileReducer: profileReducer,
   completedLessons: completedLessons,
   enrollmentReducer: enrollmentReducer,
   searchReducer: searchReducer,
+  profilePhotoReducer: profilePhotoReducer,
 });
 
 let enhancer;

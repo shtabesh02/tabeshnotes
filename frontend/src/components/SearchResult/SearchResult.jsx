@@ -10,7 +10,7 @@ function SearchResult() {
       {searchResult.length > 0 ? (
       searchResult.map(result => (
         <li key={result.id}>
-          <NavLink to={`/starrednotes/${result.id}`} style={{textDecoration: "none"}}>
+          <NavLink to={`/notes/${result.id}`} style={{textDecoration: "none"}}>
           {result.title}
           </NavLink>
         </li>

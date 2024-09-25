@@ -54,6 +54,11 @@ router.post('/:user_id', async (req, res) => {
     }});
     console.log('profilesuser: ', profilesuser)
     res.status(200).json(profilesuser);
+});
+
+// S3
+router.get('/s3Url', (req, res) => {
+    
 })
 
 module.exports = router

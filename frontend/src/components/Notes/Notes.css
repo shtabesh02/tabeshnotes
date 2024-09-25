@@ -1,7 +1,11 @@
-.starrednotes-container{
+.notes-container{
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+.notes-container img{
+    max-width: 800px;
 }
 
 h1 {

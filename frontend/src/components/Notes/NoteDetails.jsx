@@ -1,16 +1,16 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom"
-import { deleteanote, loadthenote } from "../../store/starrednotes";
+import { deleteanote, loadthenote } from "../../store/notes";
 import { NavLink } from "react-router-dom";
 import DOMPurify from 'dompurify'
-import './StarredNoteDetails.css'
+import './NoteDetails.css'
 
 const StarredNoteDetails = () => {
     const { starrednote_id } = useParams();
     const currentuser = useSelector(state => state.session.user?.id);
     // console.log('starrednote_id: ', starrednote_id)
-    const notedetails = useSelector(state => state.starrednotesReducer?.StarredNoteDetails[0]);
+    const notedetails = useSelector(state => state.notesReducer?.StarredNoteDetails[0]);
     // console.log('notedetails: ', notedetails);
 
     const dispatch = useDispatch();
@@ -24,7 +24,7 @@ const StarredNoteDetails = () => {
         dispatch(deleteanote(starrednote_id))
             .then(() => {
                 alert('The note successfully deleted.')
-                navigate('/starrednotes')
+                navigate('/notes')
             })
     }
     return (
@@ -48,7 +48,7 @@ const StarredNoteDetails = () => {
                             {/* {notedetails.content} */}
                         </div>
                         {notedetails.user_id == currentuser && <div className="notebtn">
-                            <span><button onClick={() => navigate(`/starrednotes/${notedetails.id}/update`)}>Update</button></span><span><button onClick={() => deletethisnote()}>Delete</button></span>
+                            <span><button onClick={() => navigate(`/notes/${notedetails.id}/update`)}>Update</button></span><span><button onClick={() => deletethisnote()}>Delete</button></span>
                         </div>}
                     </div>
                 }

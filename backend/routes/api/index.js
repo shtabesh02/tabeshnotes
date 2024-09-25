@@ -12,11 +12,12 @@ const usersRouter = require('./users.js');
 const courseRouter = require('./courses.js');
 const lessonRouter = require('./lessons.js');
 const commentRouter = require('./comments.js');
-const starrednotesRouter = require('./starrednotes.js');
+const notesRouter = require('./notes.js');
 const userprofileRouter = require('./userprofile.js');
 const completedRouter = require('./completed.js');
 const enrollmentRouter = require('./enrollment.js');
 const searchResult = require('./search.js');
+const getUrl = require('./getUrl.js')
 
 
 
@@ -29,11 +30,12 @@ router.use('/users', usersRouter);
 router.use('/courses', courseRouter);
 router.use('/lessons', lessonRouter);
 router.use('/comments', commentRouter);
-router.use('/starrednotes', starrednotesRouter);
+router.use('/notes', notesRouter);
 router.use('/userprofile', userprofileRouter);
 router.use('/completed', completedRouter);
 router.use('/enrollment', enrollmentRouter);
 router.use('/search', searchResult);
+router.use('/getUrl', getUrl)
 
 
 

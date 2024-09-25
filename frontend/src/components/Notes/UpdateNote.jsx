@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { loadthenote, updatethenote } from "../../store/starrednotes";
-import './UpdateStarredNote.css'
+import { loadthenote, updatethenote } from "../../store/notes";
+import './UpdateNote.css'
 import ReactQuill from "react-quill";
 
 const UpdateStarredNote = () => {
@@ -10,7 +10,7 @@ const UpdateStarredNote = () => {
     const { starrednote_id } = useParams();
     const currentuser = useSelector(state => state.session.user?.id);
     console.log('starrednote_id: ', starrednote_id)
-    const notedetails = useSelector(state => state.starrednotesReducer?.StarredNoteDetails[0]);
+    const notedetails = useSelector(state => state.notesReducer?.NoteDetails[0]);
     const [title, setTitle] = useState(notedetails?.title || '');
     const [content, setContent] = useState(notedetails?.content || '')
 
@@ -35,7 +35,7 @@ const UpdateStarredNote = () => {
         }
 
         dispatch(updatethenote(updatednote, starrednote_id))
-        .then(()=> navigate(`/starrednotes/${starrednote_id}`))
+        .then(()=> navigate(`/notes/${starrednote_id}`))
     }
 
     const module = {

@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
         onDelete: 'CASCADE'
       })
 
-      User.hasMany(models.StarredNote, {
+      User.hasMany(models.Note, {
         foreignKey: 'user_id',
         onDelete: 'CASCADE'
       })

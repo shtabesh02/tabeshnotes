@@ -1,5 +1,5 @@
 'use strict';
-const {StarredNote} = require('../models');
+const {Note} = require('../models');
 let options = {};
 if (process.env.NODE_ENV === 'production') {
   options.schema = process.env.SCHEMA;  // define your schema in options object
@@ -17,7 +17,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-   await StarredNote.bulkCreate([
+   await Note.bulkCreate([
     {
       user_id: 1,
       title: 'index.js in functional componenets direcotry',
@@ -38,7 +38,7 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    options.tableName = 'StarredNotes';
+    options.tableName = 'notes';
     const Op = Sequelize.Op;
     return queryInterface.bulkDelete(options, {
       user_id: {[Op.in]: [1, 2]}
