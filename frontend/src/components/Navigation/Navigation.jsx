@@ -52,8 +52,8 @@ function Navigation({ isLoaded }) {
     navigate('/search')
   }
   return (
-    <>
 
+    <div className="navigation_container">
       <ul className='home-nav'>
         <li>
           <NavLink to="/"><img src={'/sn-logo.png'} style={{ width: '130px' }} alt="" /></NavLink>
@@ -75,7 +75,8 @@ function Navigation({ isLoaded }) {
         <li><NavLink to={'/notes'} style={{ textDecoration: "none" }}>Notes</NavLink></li>
       </ul>
       <hr />
-    </>
+    </div>
+
   );
 }
 

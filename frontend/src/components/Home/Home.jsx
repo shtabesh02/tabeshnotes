@@ -44,7 +44,7 @@ const Home = () => {
           {Object.keys(courseByCategory)
             .sort()
             .map((category) => (
-              <div key={category}>
+              <div key={category} className='category_of_courses'>
                 <h1>{category}</h1>
                 <div className='tabs-container'>
                   <div className="tabs">
@@ -57,7 +57,7 @@ const Home = () => {
                     </h3>
                   </div>
                 </div>
-                <hr />
+                {/* <hr /> */}
                 <div className='coursesdisplay'>
                   <ul className='coursecarts'>
                     {
@@ -67,6 +67,7 @@ const Home = () => {
                           .map(course => (
                             <li key={course.id} className='thecourse'>
                               <NavLink to={`/courses/${course.id}`}>{course.title}</NavLink>
+                              <hr />
                               <p className='instructor'>
                                 Instructor: {course.instructor}
 
@@ -82,12 +83,13 @@ const Home = () => {
 
                             </li>
                           ))
-                      ) : (
-                        courseByCategory[category]
+                        ) : (
+                          courseByCategory[category]
                           .slice(-4)
                           .map(course => (
                             <li key={course.id} className='thecourse'>
                               <NavLink to={`/courses/${course.id}`}>{course.title}</NavLink>
+                                <hr />
                               <p className='instructor'>
                                 Instructor: {course.instructor}
                                 {/* <NavLink to={`/${course.Users[0]?.username}`} style={{ fontWeight: 'lighter', fontSize: '1em', color: 'black' }}>Instructor:  
@@ -99,8 +101,8 @@ const Home = () => {
                               {course.numOfStudents > 1 && <p>{course.numOfStudents} Students</p>}
                             </li>
                           ))
-                      )
-                    }
+                        )
+                      }
                   </ul>
                 </div>
               </div>
