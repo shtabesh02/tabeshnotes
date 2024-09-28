@@ -1,16 +1,19 @@
 import { useState, useEffect, useRef } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { FaUserCircle } from 'react-icons/fa';
 import * as sessionActions from '../../store/session';
 
 import './ProfileButton.css'
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState(false);
   const ulRef = useRef();
+
+  const username = useSelector(state => state.session.user?.username);
+
 
   const toggleMenu = (e) => {
     e.stopPropagation(); // Keep click from bubbling up to document and triggering closeMenu
@@ -46,9 +49,9 @@ function ProfileButton({ user }) {
         <FaUserCircle className='profileIcon' />
       </button>
       <ul className={ulClassName} ref={ulRef}>
-        <li>{user?.username}</li>
-        <li>{user?.firstName} {user?.lastName}</li>
-        <li>{user.email}</li>
+        {/* <li>{user?.username}</li> */}
+        <li><NavLink to={`/${username}`} style={{textDecoration: "none"}}>{user?.firstName} {user?.lastName}</NavLink></li>
+        {/* <li>{user.email}</li> */}
         <li>
           <button onClick={logout}>Log Out</button>
         </li>

@@ -9,7 +9,7 @@ import { loadUserProfile, updatethisprofile } from "../../store/userprofile";
 const UpdateProfile = () => {
     const currentProfile = useSelector(state => state.profileReducer?.profile);
     console.log('currentprofile: ', currentProfile)
-    const [photo, setPhoto] = useState(currentProfile?.UserProfile?.photo || '');
+    // const [photo, setPhoto] = useState(currentProfile?.UserProfile?.photo || '');
     const [github, setGithub] = useState(currentProfile?.UserProfile?.github || '');
     const [linkedin, setLinkedin] = useState(currentProfile?.UserProfile?.linkedin || '');
     const [bio, setBio] = useState(currentProfile?.UserProfile?.bio || '');
@@ -25,7 +25,7 @@ const UpdateProfile = () => {
         e.preventDefault();
         const newprofile = {
             user_id,
-            photo,
+            // photo,
             github,
             linkedin,
             bio
@@ -46,7 +46,7 @@ const UpdateProfile = () => {
 
     useEffect(() => {
         if(currentProfile){
-            setPhoto(currentProfile?.UserProfile?.photo || '');
+            // setPhoto(currentProfile?.UserProfile?.photo || '');
             setGithub(currentProfile?.UserProfile?.github || '');            
             setLinkedin(currentProfile?.UserProfile?.linkedin ||'');
             setBio(currentProfile?.UserProfile?.bio || '');
@@ -62,11 +62,11 @@ const UpdateProfile = () => {
                 <div className="addlesson">
                     <h1>Profile details</h1>
                     <form onSubmit={updateuserprofile} className="lessonform">
-                        <div>
+                        {/* <div>
                             <label htmlFor="photo">Photo link</label>
                             <input type="text" value={photo} onChange={e => setPhoto(e.target.value)} />
                             {errors.photo && <p className="errorcss">{errors.photo}</p>}
-                        </div>
+                        </div> */}
                         <div>
                             <label htmlFor="github">github</label>
                             <input type="text" value={github} onChange={e => setGithub(e.target.value)} />

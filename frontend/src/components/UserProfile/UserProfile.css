@@ -10,10 +10,10 @@
     width: 1200px;
     /* border: 1px dashed black; */
 }
-.profileheadings{
+.biodetails{
     display: flex;
-    justify-content: space-between;
-    /* border: 1px solid gray; */
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     padding: 20px;
 }
@@ -21,7 +21,7 @@
     display: flex;
     gap: 20px;
 }
-.followme{
+.profilephoto{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,7 +35,7 @@
     width: 180px;
     height: 200px;
     border: 1px solid gainsboro;
-    border-radius: 10px;
+    border-radius: 2px;
 }
 .followonsn{
     background-color: aliceblue;
@@ -61,4 +61,17 @@
     gap: 20px;
     justify-content: center;
     font-weight: bold;
+}
+
+.bio{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    /* border: 1px solid rebeccapurple; */
+}
+.updateyourprofile{
+    display: flex;
+    justify-content: flex-end;
+    /* border: 1px solid red; */
 }

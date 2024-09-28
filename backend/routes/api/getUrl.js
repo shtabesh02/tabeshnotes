@@ -30,25 +30,19 @@ const upload = multer({ storage: storage })
 
 router.get('/users/:user_id', async (req, res) => {
     const { user_id } = req.params;
-    const photos = await UserProfile.findAll({ where: { user_id } });
-
-    console.log("S3 photos:", photos);
-
-    const photosDetails = [];
-    for (const photo of photos) {
-        const photoObj = photo.toJSON(); // frist we need change it to plain object
-
-        const getObjectParams = {
-            Bucket: bucketName,
-            Key: photo.photo
-        }
-        const command = new GetObjectCommand(getObjectParams);
-        const url = await getSignedUrl(s3, command, { expiresIn: 3600 });
-        photoObj.imageUrl = url
-        photosDetails.push(photoObj);
+    const photos = await UserProfile.findOne(
+        { 
+            where: { user_id },
+            order: [['id', 'DESC']],
+            limit: 1
+     });
+    const getObjectParams = {
+        Bucket: bucketName,
+        Key: photos.photo
     }
-
-    res.send(photosDetails)
+    const command = new GetObjectCommand(getObjectParams);
+    const url = await getSignedUrl(s3, command, { expiresIn: 3600 });
+    res.send(url)
 });
 
 
