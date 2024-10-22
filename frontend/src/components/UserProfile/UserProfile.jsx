@@ -64,7 +64,7 @@ function UserProfile() {
      }
    }
    getPhotos();
- }, []);
+ }, [currentuser]);
 
   return (
     <div className='topcontainerdiv'>
