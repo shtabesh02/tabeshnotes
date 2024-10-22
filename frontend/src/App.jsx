@@ -15,14 +15,14 @@ import UpdateCourse from './components/ManageCourses/UpdateCourse';
 import ManageLessons from './components/ManageLessons/ManageLessons';
 import AddLesson from './components/ManageLessons/AddLesson';
 import UpdateLesson from './components/ManageLessons/UpdateLesson';
-import NoteDetails from './components/notes/NoteDetails';
+// import NoteDetails from './components/notes/NoteDetails';
+import NoteDetails from './components/Notes/NoteDetails'
 import UpdateStarredNote from './components/notes/UpdateNote';
 import UserProfile from './components/UserProfile/UserProfile';
 import UpdateProfile from './components/UserProfile/UpdateProfile';
 import AddProfile from './components/UserProfile/AdduserProfile';
 import SearchResult from './components/SearchResult';
 import Notes from './components/Notes/Notes';
-
 function Layout() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
