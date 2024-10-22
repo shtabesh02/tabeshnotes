@@ -29,6 +29,9 @@ const storage = multer.memoryStorage()
 const upload = multer({ storage: storage })
 
 router.get('/users/:user_id', async (req, res) => {
+    // I need to send the username instead of user_id.
+    // Then get username's id from the Users table.
+    
     const { user_id } = req.params;
     const photos = await UserProfile.findOne(
         { 

@@ -1,0 +1,25 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "backend",
+        "command": "npm run build",
+        "output": "backend/dist"
+      },
+      {
+        "src": "frontend",
+        "command": "npm run build",
+        "output": "frontend/dist"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "backend/dist/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "frontend/dist/$1"
+      }
+    ]
+  }
