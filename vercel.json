@@ -1,14 +1,9 @@
 {
-  "builds": [
+  "REWRITES": [
     {
-      "src": "frontend/package.json",
-      "use": "@vercel/static-build"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "SOURCE":"/(.*)",
+      "DESTINATION":"/"
     }
   ]
 }
+
