@@ -1,16 +1,4 @@
 {
-  "builds": [
-    {
-      "src": "backend",
-      "command": "npm run build",
-      "output": "backend/dist"
-    },
-    {
-      "src": "frontend",
-      "command": "npm run build",
-      "output": "frontend/dist"
-    }
-  ],
   "routes": [
     {
       "src": "/api/(.*)",
