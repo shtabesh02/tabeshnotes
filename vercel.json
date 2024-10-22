@@ -8,5 +8,12 @@
       "source": "/(.*)",
       "destination": "index.html"
     }
+  ],
+  "builds": [
+    {
+      "src": "src",
+      "command": "npm run build",
+      "output": "dist"
+    }
   ]
 }
