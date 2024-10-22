@@ -5,7 +5,7 @@ import { loadthenote, updatethenote } from "../../store/notes";
 import './UpdateNote.css'
 import ReactQuill from "react-quill";
 
-const UpdateStarredNote = () => {
+const UpdateNote = () => {
 
     const { starrednote_id } = useParams();
     const currentuser = useSelector(state => state.session.user?.id);
@@ -88,4 +88,4 @@ const UpdateStarredNote = () => {
   )
 }
 
-export default UpdateStarredNote
+export default UpdateNote
