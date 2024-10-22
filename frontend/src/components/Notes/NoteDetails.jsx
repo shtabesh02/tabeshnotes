@@ -6,11 +6,11 @@ import { NavLink } from "react-router-dom";
 import DOMPurify from 'dompurify'
 import './NoteDetails.css'
 
-const StarredNoteDetails = () => {
+const NoteDetails = () => {
     const { starrednote_id } = useParams();
     const currentuser = useSelector(state => state.session.user?.id);
     // console.log('starrednote_id: ', starrednote_id)
-    const notedetails = useSelector(state => state.notesReducer?.StarredNoteDetails[0]);
+    const notedetails = useSelector(state => state.notesReducer?.NoteDetails[0]);
     // console.log('notedetails: ', notedetails);
 
     const dispatch = useDispatch();
@@ -57,4 +57,4 @@ const StarredNoteDetails = () => {
     )
 }
 
-export default StarredNoteDetails
+export default NoteDetails

@@ -15,7 +15,7 @@ import UpdateCourse from './components/ManageCourses/UpdateCourse';
 import ManageLessons from './components/ManageLessons/ManageLessons';
 import AddLesson from './components/ManageLessons/AddLesson';
 import UpdateLesson from './components/ManageLessons/UpdateLesson';
-import StarredNoteDetails from './components/notes/NoteDetails';
+import NoteDetails from './components/notes/NoteDetails';
 import UpdateStarredNote from './components/notes/UpdateNote';
 import UserProfile from './components/UserProfile/UserProfile';
 import UpdateProfile from './components/UserProfile/UpdateProfile';
@@ -95,7 +95,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/notes/:starrednote_id',
-        element: <StarredNoteDetails />
+        element: <NoteDetails />
       },
       {
         path: '/notes/:starrednote_id/update',

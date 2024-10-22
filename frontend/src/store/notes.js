@@ -116,7 +116,7 @@ const notesReducer = (state = initialState, action) => {
             return {...state, notes: {...state.notes, [action.newnote.id]:action.newnote}}
         }
         case ADDTHISNOTE2THESTATE: {
-            return {...state, StarredNoteDetails: {...action.notedetails}}
+            return {...state, NoteDetails: {...action.notedetails}}
         }
         case UPDATEMYStarredNOTE: {
             return {...state, notes: {...state.notes, [action.updatednote.id]: action.updatednote}}
