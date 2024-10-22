@@ -1,4 +1,11 @@
 {
+  "builds": [
+    {
+      "src": "src",
+      "command": "npm run build",
+      "output": "dist"
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/:path*",
@@ -7,15 +14,6 @@
     {
       "source": "/(.*)",
       "destination": "index.html"
-    },
-    {
-      "builds": [
-        {
-          "src": "src",
-          "command": "npm run build",
-          "output": "dist"
-        }
-      ]
     }
   ]
 }
