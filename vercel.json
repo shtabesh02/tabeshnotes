@@ -2,7 +2,6 @@
   "builds": [
     {
       "src": "backend",
-      "command": "npm run build",
       "output": "backend/dist"
     },
     {
