@@ -1,12 +1,10 @@
 {
   "builds": [
     {
-      "src": "backend",
-      "output": "backend/dist"
+      "src": "backend"
     },
     {
-      "src": "frontend",
-      "output": "frontend/dist"
+      "src": "frontend"
     }
   ],
   "rewrites": [
