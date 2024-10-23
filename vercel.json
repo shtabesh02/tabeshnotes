@@ -1,4 +1,16 @@
 {
+  "builds": [
+    {
+      "src": "backend",
+      "command": "npm run build",
+      "output": "backend/dist"
+    },
+    {
+      "src": "frontend",
+      "command": "npm run build",
+      "output": "frontend/dist"
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/:path*",
@@ -6,7 +18,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "index.html"
+      "destination": "frontend/dist/$1"
     }
   ]
 }
