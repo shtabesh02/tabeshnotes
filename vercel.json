@@ -7,7 +7,6 @@
     },
     {
       "src": "frontend",
-      "command": "npm run build",
       "output": "frontend/dist"
     }
   ],
