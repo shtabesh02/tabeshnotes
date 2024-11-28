@@ -1,5 +1,5 @@
 'use strict';
-const {StarredNoteComment} = require('../models');
+const {NoteComment} = require('../models');
 let options = {};
 if (process.env.NODE_ENV === 'production') {
   options.schema = process.env.SCHEMA;  // define your schema in options object
@@ -17,7 +17,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-   await StarredNoteComment.bulkCreate([
+   await NoteComment.bulkCreate([
     {
       user_id: 1,
       note_id: 1,
@@ -25,7 +25,7 @@ module.exports = {
     },
     {
       user_id: 2,
-      starrednote_id: 2,
+      note_id: 2,
       comment: 'Finally, found the solution I was looking for. Thanks.'
     }
    ], {validate: true})
