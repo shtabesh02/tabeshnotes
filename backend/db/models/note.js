@@ -20,9 +20,9 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'user_id',
       });
 
-      Note.hasMany(models.Media, {
-        foreignKey: 'note_id',
-      })
+      // Note.hasMany(models.Media, {
+      //   foreignKey: 'note_id',
+      // })
     }
   }
   Note.init({

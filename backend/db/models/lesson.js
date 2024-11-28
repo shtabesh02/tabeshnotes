@@ -28,9 +28,9 @@ module.exports = (sequelize, DataTypes) => {
         onDelete: 'CASCADE'
       });
 
-      Lesson.hasMany(models.Media, {
-        foreignKey: 'lesson_id',
-      })
+      // Lesson.hasMany(models.Media, {
+      //   foreignKey: 'lesson_id',
+      // })
 
     }
   }
