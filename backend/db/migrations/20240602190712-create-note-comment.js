@@ -23,7 +23,7 @@ module.exports = {
         onDelete: 'CASCADE',
         allowNull: false
       },
-      starrednote_id: {
+      note_id: {
         type: Sequelize.INTEGER,
         references: {
           model: 'notes',

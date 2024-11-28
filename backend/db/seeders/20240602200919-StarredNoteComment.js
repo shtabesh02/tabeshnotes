@@ -20,7 +20,7 @@ module.exports = {
    await StarredNoteComment.bulkCreate([
     {
       user_id: 1,
-      starrednote_id: 1,
+      note_id: 1,
       comment: 'A useful and helpful note. Thanks for sharing...'
     },
     {

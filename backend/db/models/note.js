@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Note.hasMany(models.StarredNoteComment, {
+      Note.hasMany(models.NoteComment, {
         foreignKey: 'note_id',
         onDelete: 'CASCADE'
       });
